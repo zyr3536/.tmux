@@ -382,12 +382,12 @@ set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
+set -g status-keys vi
+set -g mode-keys vi
 #（进入复制模式后）输入 'v' 开始选择
-bind-key -t vi-copy v begin-selection
+bind-key -T vi-copy v begin-selection
 # 将选中文字添加到系统的剪贴板中
-bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+bind-key -T vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
