@@ -382,12 +382,12 @@ set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-set -g status-keys vi
-set -g mode-keys vi
-#（进入复制模式后）输入 'v' 开始选择
-bind-key -T vi-copy v begin-selection
-# 将选中文字添加到系统的剪贴板中
-bind-key -T vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+#set -g status-keys vi
+#set -g mode-keys vi
+##（进入复制模式后）输入 'v' 开始选择
+#bind-key -T vi-copy v begin-selection
+## 将选中文字添加到系统的剪贴板中
+#bind-key -T vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
 set -gu prefix2
 unbind C-a
@@ -439,6 +439,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
+
+set -g @plugin 'catppuccin/tmux'
 
 
 # -- custom variables ----------------------------------------------------------
