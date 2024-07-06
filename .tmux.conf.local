@@ -389,12 +389,8 @@ bind-key -T vi-copy v begin-selection
 # 将选中文字添加到系统的剪贴板中
 bind-key -T vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
- unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
+set -gu prefix2
+unbind C-a
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
